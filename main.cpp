@@ -120,6 +120,7 @@ int main(int argc , char* argv[])
 
             int countdown = 120;
             Uint32 startTime = SDL_GetTicks();
+            Uint32 isTouch = SDL_GetTicks();
             Mix_PlayMusic(gMusic,-1);
 
             while( isRunning )
@@ -238,6 +239,19 @@ int main(int argc , char* argv[])
 
                 if(!lose)
                 {
+
+                     for(int i = 0 ; i < eCount ; ++i)
+                                {
+                                    if(checkCollision(mPlayerBox,enemies[i]->mEnemyBox))
+                                    {
+                                        Uint32 currentTime1 = SDL_GetTicks();
+                                        Uint32 elapsedTime1 = currentTime1 - isTouch;
+                                        if (elapsedTime1 >= 2000) {
+                                            lose = true;
+                                        }
+                                    }
+                                }
+
                     const Uint8* currentKeyStates = SDL_GetKeyboardState( NULL );
                     if( currentKeyStates[ SDL_SCANCODE_UP ] )
                     {
@@ -273,8 +287,12 @@ int main(int argc , char* argv[])
                                 {
                                     if(checkCollision2(mPlayerBox,enemies[i]->mEnemyBox))
                                     {
-                                        eDead[i] =true;
-//                                        lose = true;
+                                        eDead[i] = true;
+//                                        Uint32 currentTime1 = SDL_GetTicks();
+//                                        Uint32 elapsedTime1 = currentTime1 - isTouch;
+//                                        if (elapsedTime1 >= 2000) {
+//                                            lose = true;
+//                                        }
                                     }
                                 }
 
@@ -293,6 +311,7 @@ int main(int argc , char* argv[])
                                 for(int i = 0 ; i < eCount ; ++i)
                                 {
                                     if(checkCollision2(mPlayerBox,enemies[i]->mEnemyBox))eDead[i] =true;
+
                                 }
                             }else
                             {
