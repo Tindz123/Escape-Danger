@@ -242,11 +242,11 @@ int main(int argc , char* argv[])
 
                      for(int i = 0 ; i < eCount ; ++i)
                                 {
-                                    if(checkCollision(mPlayerBox,enemies[i]->mEnemyBox))
+                                    if(checkCollision(mPlayerBox,enemies[i]->mEnemyBox)&& !eDead[i])
                                     {
                                         Uint32 currentTime1 = SDL_GetTicks();
                                         Uint32 elapsedTime1 = currentTime1 - isTouch;
-                                        if (elapsedTime1 >= 2000) {
+                                        if (elapsedTime1 >= 3000) {
                                             lose = true;
                                         }
                                     }
