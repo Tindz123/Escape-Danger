@@ -1,0 +1,99 @@
+# depslib dependency file v1.0
+1715600754 source:c:\users\admin\desktop\sdl\escape danger\src\game.cpp
+	"game.h"
+
+1715600754 c:\users\admin\desktop\sdl\escape danger\src\game.h
+	<utils.h>
+
+1715656093 source:c:\users\admin\desktop\sdl\escape danger\main.cpp
+	<utils.h>
+	"game.h"
+	"timer.h"
+	"player.h"
+	"slime.h"
+	"buttons.h"
+	"functions.h"
+	<random>
+
+1715592057 source:c:\users\admin\desktop\sdl\escape danger\src\player.cpp
+	"player.h"
+
+1715503128 c:\users\admin\desktop\sdl\escape danger\src\player.h
+	<utils.h>
+	<game.h>
+
+1715145505 source:c:\users\admin\desktop\sdl\escape danger\src\movep.cpp
+	"moveP.h"
+
+1715145505 c:\users\admin\desktop\sdl\escape danger\src\movep.h
+
+1715160823 source:c:\users\admin\desktop\sdl\escape danger - copy (2)\main.cpp
+	"player.h"
+
+1715226959 c:\users\admin\desktop\sdl\escape danger - copy (2)\src\player.h
+	"game.h"
+	<SDL.h>
+
+1715229666 c:\users\admin\desktop\sdl\escape danger - copy (2)\src\game.h
+	<bits/stdc++.h>
+	<SDL.h>
+	<SDL_image.h>
+
+1715226959 source:c:\users\admin\desktop\sdl\escape danger - copy (2)\src\player.cpp
+	"player.h"
+	"game.h"
+
+1715231759 source:c:\users\admin\desktop\sdl\escape danger - copy (2)\src\game.cpp
+	"player.h"
+	"game.h"
+
+1715271174 source:c:\users\admin\desktop\sdl\escape danger\src\enemy.cpp
+	"enemy.h"
+
+1715271174 c:\users\admin\desktop\sdl\escape danger\src\enemy.h
+
+1715271163 source:c:\users\admin\desktop\sdl\escape danger\src\time.cpp
+	"time.h"
+
+1715271163 c:\users\admin\desktop\sdl\escape danger\src\time.h
+
+1715528572 source:c:\users\admin\desktop\sdl\escape danger\src\utils.cpp
+	"utils.h"
+
+1715326069 source:c:\users\admin\desktop\sdl\escape danger\src\timer.cpp
+	"timer.h"
+
+1715325196 c:\users\admin\desktop\sdl\escape danger\src\timer.h
+	<utils.h>
+
+1715607491 c:\users\admin\desktop\sdl\escape danger\src\utils.h
+	<bits/stdc++.h>
+	<ctime>
+	<time.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	"SDL_mixer.h"
+
+1715526303 source:c:\users\admin\desktop\sdl\escape danger\src\slime.cpp
+	"slime.h"
+
+1715656209 c:\users\admin\desktop\sdl\escape danger\src\slime.h
+	<utils.h>
+	<game.h>
+
+1715583205 c:\users\admin\desktop\sdl\escape danger\src\buttons.h
+	"utils.h"
+	"game.h"
+
+1715602183 source:c:\users\admin\desktop\sdl\escape danger\src\buttons.cpp
+	"buttons.h"
+
+1715617911 source:c:\users\admin\desktop\sdl\escape danger\src\functions.cpp
+	"functions.h"
+
+1715612975 c:\users\admin\desktop\sdl\escape danger\src\functions.h
+	"utils.h"
+	"game.h"
+	"buttons.h"
+
