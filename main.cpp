@@ -221,7 +221,7 @@ int main(int argc , char* argv[])
                         Player->handleEvent(e,direct,mVelX ,mVelY );
                 }
 
-                if (SDL_GetTicks() - lastTime >= 2000)
+                if (SDL_GetTicks() - lastTime >= 1000)
                 {
                     slime *Slime =new slime();
                     Slime->enemyX = randomInt(0, 800);
@@ -246,7 +246,7 @@ int main(int argc , char* argv[])
                                     {
                                         Uint32 currentTime1 = SDL_GetTicks();
                                         Uint32 elapsedTime1 = currentTime1 - isTouch;
-                                        if (elapsedTime1 >= 3000) {
+                                        if (elapsedTime1 >= 7000) {
                                             lose = true;
                                         }
                                     }
@@ -288,11 +288,6 @@ int main(int argc , char* argv[])
                                     if(checkCollision2(mPlayerBox,enemies[i]->mEnemyBox))
                                     {
                                         eDead[i] = true;
-//                                        Uint32 currentTime1 = SDL_GetTicks();
-//                                        Uint32 elapsedTime1 = currentTime1 - isTouch;
-//                                        if (elapsedTime1 >= 2000) {
-//                                            lose = true;
-//                                        }
                                     }
                                 }
 
@@ -363,7 +358,10 @@ int main(int argc , char* argv[])
                         {
                             if(eDead[i] == true)
                             {
+                                int tmp = i;
                                 enemies[i]->render(gEDTexture,gRenderer,&gSpriteClipsED[enemies[i]->slimeDFrame/ENEMY_D_ANIMATION]);
+                                enemies[i]->updateDFrame(ENEMY_D_ANIMATION,enemies[i]->slimeDFrame,enemies[i]->isDelete);
+                                if(enemies[i]->isDelete == true){enemies.erase(enemies.begin() + tmp) , enemies[i]->isDelete = false;}
                             }else
                             {
                                 enemies[i]->render(gETexture,gRenderer,&gSpriteClipsE[enemies[i]->slimeFrame/ENEMY_ANIMATION]);
